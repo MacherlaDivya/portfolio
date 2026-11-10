@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Divya Macherla – Developer and Game Designer</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bungee&family=Outfit:wght@400;500;600&display=swap">
+<style>
+:root{color-scheme:light;--bg:#ffffff;--soft:#f4f7fa;--ink:#12233d;--mute:#52627a;--teal:#0f9aa0;--coral:#ff6b5e;--sun:#ffc857;--line:#dde4ec;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Outfit,system-ui,sans-serif;font-size:17px;line-height:1.65}
+.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+h1,h2,.display{font-family:Bungee,Impact,sans-serif;font-weight:400;line-height:1.08;margin:0}
+a{color:var(--teal)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--coral);outline-offset:3px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:rgba(255,255,255,.95);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;gap:20px;align-items:center;overflow-x:auto;white-space:nowrap;padding-top:12px;padding-bottom:12px}
+nav b{font-family:Bungee,Impact,sans-serif;font-weight:400;margin-right:auto;color:var(--coral)}
+nav a{text-decoration:none;color:var(--mute);font-weight:500}
+nav a:hover{color:var(--teal)}
+.hero{padding:56px 0 64px;background:linear-gradient(180deg,#fff 0%,var(--soft) 100%)}
+.hero .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
+.hero h1{font-size:clamp(40px,7vw,78px)}
+.hero h1 span{color:var(--coral)}
+.lead{color:var(--mute);font-size:19px;max-width:54ch;margin:20px 0 26px}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:12px 22px;border-radius:999px;font-weight:600;text-decoration:none;border:2px solid var(--ink);color:var(--ink)}
+.btn.main{background:var(--coral);border-color:var(--coral);color:#fff}
+.btn:hover{border-color:var(--teal)}
+.phone{width:100%;max-width:300px;margin:0 auto;aspect-ratio:9/16;border-radius:34px;border:8px solid var(--ink);overflow:hidden;position:relative;background:linear-gradient(180deg,#ffd9a8 0%,#ff9d8a 38%,#5cc8cc 38.1%,#12233d 100%)}
+.sun{position:absolute;left:50%;top:14%;width:96px;height:96px;margin-left:-48px;border-radius:50%;background:linear-gradient(180deg,var(--sun),var(--coral))}
+.palm{position:absolute;bottom:62%;font-size:46px}
+.palm.l{left:8%}.palm.r{right:8%}
+.track{position:absolute;left:0;right:0;bottom:0;height:62%;perspective:260px;overflow:hidden}
+.road{position:absolute;left:-10%;right:-10%;top:0;bottom:-30%;transform:rotateX(52deg);transform-origin:top;background:
+repeating-linear-gradient(180deg,transparent 0 36px,rgba(255,255,255,.35) 36px 48px),
+linear-gradient(90deg,transparent 0 33.2%,#ffc857 33.2% 33.8%,transparent 33.8% 66.2%,#ffc857 66.2% 66.8%,transparent 66.8%),#1d3350;background-size:100% 96px,100% 100%,100% 100%;animation:run 1s linear infinite}
+@keyframes run{to{background-position:0 96px,0 0,0 0}}
+.runner{position:absolute;bottom:12%;left:50%;margin-left:-14px;font-size:30px;animation:sway 3.2s ease-in-out infinite}
+@keyframes sway{0%,20%{transform:translateX(-62px)}40%,60%{transform:translateX(0)}80%,100%{transform:translateX(62px)}}
+.cap{position:absolute;top:5%;left:0;right:0;text-align:center;font-family:Bungee,Impact,sans-serif;color:var(--ink);font-size:15px}
+section{padding:72px 0}
+section.alt{background:var(--soft)}
+h2{font-size:clamp(26px,4.5vw,40px);margin-bottom:12px}
+h2::after{content:"";display:block;width:80px;height:6px;border-radius:3px;background:var(--coral);margin-top:12px}
+.sub{color:var(--mute);max-width:62ch;margin:14px 0 28px}
+.game{border-radius:26px;overflow:hidden;border:2px solid var(--ink);display:grid;grid-template-columns:1fr 1fr}
+.gl{padding:36px;background:linear-gradient(135deg,#ffd9a8,#ff9d8a)}
+.gr{padding:36px;background:#fff}
+.badge{display:inline-block;background:var(--ink);color:#fff;padding:4px 14px;border-radius:999px;font-size:14px;font-weight:600;margin-bottom:14px}
+.game h3{font-family:Bungee,Impact,sans-serif;font-weight:400;font-size:clamp(24px,4vw,34px);line-height:1.1;margin:0 0 12px}
+.lanes{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:20px}
+.lanes div{background:rgba(255,255,255,.7);border-radius:10px;padding:10px;text-align:center;font-weight:600;font-size:14px}
+.note{font-size:13px;color:var(--mute);margin-top:16px}
+.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(290px,1fr))}
+.card{border:2px solid var(--line);border-radius:18px;padding:24px;background:#fff}
+.card h3{margin:0 0 4px;font-size:19px}
+.meta{color:var(--teal);font-weight:600;font-size:14px;margin:0 0 8px}
+.card ul,.tl ul{margin:6px 0 0;padding-left:20px}
+.card li,.tl li{margin:5px 0}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tag{border:1.5px solid var(--teal);color:var(--ink);border-radius:999px;padding:3px 12px;font-size:14px;font-weight:500}
+.tl{border-left:4px solid var(--coral);padding-left:22px}
+.tl h3{margin:0;font-size:20px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:14px;margin-top:26px}
+.stat{border-radius:14px;padding:16px;color:#fff;background:var(--teal)}
+.stat:nth-child(2){background:var(--coral)}.stat:nth-child(3){background:var(--ink)}.stat:nth-child(4){background:var(--teal)}
+.stat b{display:block;font-family:Bungee,Impact,sans-serif;font-weight:400;font-size:26px}
+.certs{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.cert{border-left:5px solid var(--sun);background:#fff;border-radius:10px;padding:14px 16px;border-top:1px solid var(--line);border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.cert.new{border-left-color:var(--coral)}
+.cert small{display:block;color:var(--mute)}
+footer{background:var(--ink);color:#fff;padding:64px 0 80px;text-align:center}
+footer h2::after{margin-left:auto;margin-right:auto}
+footer .btns{justify-content:center;margin-top:22px}
+footer .btn{color:#fff;border-color:#fff}footer .btn.main{border-color:var(--coral)}
+@media (max-width:820px){.hero .wrap,.game{grid-template-columns:1fr}.gl,.gr{padding:26px}.phone{max-width:240px}}
+@media (prefers-reduced-motion:reduce){.road,.runner{animation:none}}
+</style>
+</head>
+<body>
+<nav aria-label="Sections"><div class="wrap"><b>DM</b><a href="#game">Game</a><a href="#projects">Projects</a><a href="#hackathon">Hackathon</a><a href="#skills">Skills</a><a href="#certs">Certifications</a><a href="#contact">Contact</a></div></nav>
+
+<header class="hero"><div class="wrap">
+<div>
+<h1>Divya <span>Macherla</span></h1>
+<p class="lead">Computer Science undergraduate (CGPA 9.36) who builds Java and REST API software and designs games. BNP Paribas hackathon finalist.</p>
+<div class="btns"><a class="btn main" href="#game">See my game project</a><a class="btn" href="#contact">Contact me</a></div>
+</div>
+<div class="phone" role="img" aria-label="Animated three-lane runner scene with a Miami Beach sunset">
+<div class="cap">MIAMI BEACH</div><div class="sun"></div><div class="palm l">🌴</div><div class="palm r">🌴</div>
+<div class="track"><div class="road"></div></div><div class="runner">🏃</div>
+</div>
+</div></header>
+
+<section id="game"><div class="wrap">
+<h2>Featured game design project</h2>
+<p class="sub">My game design work, front and centre.</p>
+<div class="game">
+<div class="gl"><span class="badge">Game design</span><h3>Subway Surfers: Miami Beach</h3>
+<p>A game design project based on Subway Surfers with a Miami Beach theme.</p>
+<div class="lanes"><div>Left lane</div><div>Centre lane</div><div>Right lane</div></div>
+<p class="note">Fan-made design project. Subway Surfers is a trademark of SYBO Games and Kiloo.</p></div>
+<div class="gr"><h3 style="font-size:22px">Why it matters to me</h3>
+<p>I like building software, and I like designing the experience people play. This project is where those two interests meet.</p>
+<div class="tags"><span class="tag">Game design</span><span class="tag">Mobile runner</span><span class="tag">Miami Beach theme</span></div></div>
+</div>
+</div></section>
+
+<section id="projects" class="alt"><div class="wrap">
+<h2>Software projects</h2>
+<div class="grid" style="margin-top:26px">
+<div class="card"><h3>Voice-Enabled Merchant Billing Application</h3><p class="meta">React · JavaScript · REST APIs</p>
+<ul><li>Built a speech-to-text billing application integrating voice-processing APIs with a frontend interface.</li><li>Connected frontend and backend through APIs and automated billing workflows, reducing manual effort by 30%.</li></ul></div>
+<div class="card"><h3>Banking System with Transaction Management</h3><p class="meta">Java · OOP · HashMap</p>
+<ul><li>Built an application supporting account creation, balance tracking and transaction handling using Core Java.</li><li>Applied OOP, HashMap, ArrayList, input validation and exception handling for reliable data management.</li></ul></div>
+</div>
+<p style="margin-top:18px"><a href="https://github.com/MacherlaDivya">See my code on GitHub</a></p>
+</div></section>
+
+<section id="hackathon"><div class="wrap">
+<h2>Hackathon experience</h2>
+<div class="tl" style="margin-top:26px"><h3>BNP Paribas India CoE INNOVERSITÉ – 24-Hour Hackathon</h3><p class="meta">Bengaluru · Sep 2026</p>
+<ul><li>Selected for the final round and collaborated with a team on a solution for a real-world retail transformation use case.</li><li>Contributed to the Customer Service microservice and worked on frontend–backend integration using REST APIs.</li><li>Gained practical experience in microservices, API testing, debugging, Git/GitHub and Postman.</li><li>Presented the solution, explaining the business use case, system flow, technical implementation and team contribution.</li></ul></div>
+<div class="stats"><div class="stat"><b>24 hrs</b>Hackathon</div><div class="stat"><b>Final</b>Round reached</div><div class="stat"><b>9.36</b>CGPA / 10</div><div class="stat"><b>30%</b>Manual effort cut</div></div>
+</div></section>
+
+<section id="skills" class="alt"><div class="wrap">
+<h2>Skills and education</h2>
+<div class="grid" style="margin-top:26px">
+<div class="card"><h3>Technical skills</h3>
+<ul><li><b>Languages:</b> Java, SQL, JavaScript</li><li><b>Development:</b> REST APIs, Microservices, Frontend–Backend Integration</li><li><b>Core:</b> OOP, DSA, Operating Systems, Computer Networks, Cloud Computing</li><li><b>Tools:</b> Git, GitHub, VS Code, RabbitMQ, Docker</li><li><b>Cloud:</b> AWS EC2, AWS S3</li><li><b>Other:</b> API Testing, Debugging, Problem Solving</li></ul></div>
+<div class="card"><h3>Education</h3><p class="meta">2023 – 2027</p><p style="margin:0 0 16px"><b>B.Tech, Computer Science and Engineering</b><br>SR University, Warangal · CGPA 9.36 / 10</p>
+<h3>Strengths</h3><div class="tags"><span class="tag">Problem solving</span><span class="tag">Quick learner</span><span class="tag">Team collaboration</span><span class="tag">Communication</span><span class="tag">Debugging and testing</span><span class="tag">Adaptability</span></div></div>
+</div></div></section>
+
+<section id="certs"><div class="wrap">
+<h2>Certifications</h2>
+<div class="certs" style="margin-top:26px">
+<div class="cert new"><b>Security Threat Intelligence</b><small>Infosys Springboard · Nov 8, 2026 · <a href="https://verify.onwingspan.com">verify.onwingspan.com</a></small></div>
+<div class="cert"><b>AWS Academy Graduate</b><small>Cloud Developing</small></div>
+<div class="cert"><b>Building LLM Applications with Prompt Engineering</b><small>NVIDIA</small></div>
+<div class="cert"><b>CCNA: Introduction to Networks</b><small>Cisco</small></div>
+<div class="cert"><b>Data Analytics Essentials</b><small>Cisco</small></div>
+<div class="cert"><b>Endpoint Security</b><small>Cisco</small></div>
+<div class="cert"><b>WeForShe Hacker Ramp 2026</b><small>Participation Certificate</small></div>
+</div></div></section>
+
+<footer id="contact"><div class="wrap">
+<h2>Let's connect</h2>
+<p style="color:#c9d4e3">Warangal, Telangana, India</p>
+<div class="btns"><a class="btn main" href="mailto:divyapersonal06@gmail.com">Email me</a><a class="btn" href="tel:+919014919300">+91 9014919300</a><a class="btn" href="https://www.linkedin.com/in/macherla-divya-8ba45b2ab/">LinkedIn</a><a class="btn" href="https://github.com/MacherlaDivya">GitHub</a><a class="btn" href="https://leetcode.com/u/gfPpjQegwV/">LeetCode</a></div>
+</div></footer>
+</body>
+</html>
